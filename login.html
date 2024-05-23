@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign in</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="content-center" style="display: flex;justify-content: center;align-items: center;height: 100%;width: 100%;">
+    <div class="container" style="width: 400px; margin: 10px; ">
+        <h1>CARMOTORS</h1>
+        <div style="display: flex; justify-content: center; text-align: center">
+
+            <img src="https://i.postimg.cc/kBLdJ9cY/autologo.jpg" style="border-radius: 50%" width="200" height="200" alt="Logo">
+        </div>
+
+        <h2>Вхід</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">  Емейл</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">  Пароль</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 5px;">
+                <div class="form-group">
+                    <button id="login-button" type="submit">Вхід</button>
+                </div>
+                <div class="form-group">
+                    <button onclick="window.location.href='registration.html'">Реєстрація</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

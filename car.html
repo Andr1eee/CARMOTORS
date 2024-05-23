@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на консультацію по авто</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+<h1>CARMOTORS</h1>
+<div class="logo">
+    <img src="https://i.postimg.cc/kBLdJ9cY/autologo.jpg" alt="автолого" style="border-radius: 50%" width="200" height="200">
+</div>
+<h2 style="text-align: end" id="account-username"></h2>
+<nav>
+
+    <button class="toggle-btn" style="background-color: #fafaf7; color: rgba(24, 24, 24, 0.85); border-radius: 18px">&#9776;</button>
+    <a class="nav-link pc" href="cars.html">Топ продажів</a>
+    <a class="nav-link pc" href="about.html">Контаки</a>
+    <a class="nav-link pc" href="home.html">Головна</a>
+
+
+    <div class="mobile-nav">
+        <br>
+        <a class="nav-link mb" href="cars.html">Топ продажів</a>
+        <br>
+        <a class="nav-link mb" href="about.html">Контаки</a>
+        <br>
+        <a class="nav-link mb" href="home.html">Головна</a>
+        <br>
+    </div>
+
+</nav>
+<div class="content-center car-registration">
+    <div class="text-container" style="max-width:100%; padding: 12px; background-color: #efefef; border-radius: 12px;">
+        <div id="product-details">
+            <!-- Здесь можно добавить детали о продукте -->
+        </div>
+    </div>
+    <div style="display: block; margin-left: 10px; text-align: center">
+        <strong>Оберіть дату для запису на конусльтацію</strong>
+        <div style="display: flex; justify-content: center; margin-top:10px;">
+            <div class="calendar"></div>
+        </div>
+        <div class="time-slots">
+            <label for="time-slot" style="font-weight: bold">Оберіть час:</label>
+            <select id="time-slot">
+                <option value="10-11">10:00 - 11:00</option>
+                <option value="12-13">12:00 - 13:00</option>
+                <option value="14-15">14:00 - 15:00</option>
+                <option value="17-18">17:00 - 18:00</option>
+            </select>
+            <button id="zapis" style="margin-top: 10px">Записатись</button>
+
+            <div id="confirmation-message" style="display: none; margin-top: 10px; background-color: #4F6F52; padding:1px 10px 1px 10px;  border-radius: 24px; color: white">
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script src="get-user-data.js"></script>
+<script src="nav-bar.js"></script>
+<script src="car.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#zapis").click(function(){
+            let message = document.getElementById("confirmation-message");
+            message.innerHTML =
+                `<p>Дякую що записались на консультацію.</p>
+                 <p>З вами звяжуться по контактам які ви вказали при реєстрації</p>
+                 <p>А саме:</p>
+                 <p>Ваш телефон:${userData.phoneNumber}</p>
+                 <p>Ваш емейл: ${userData.email}</p>
+                 <p>Гарного вам дня :)</p>`;
+
+            $("#confirmation-message").fadeIn("slow");
+        });
+    });
+    $(function() {
+        $(".calendar").datepicker({
+            dateFormat: 'dd.mm.yy',
+            beforeShowDay: function(date) {
+                var day = date.getDay();
+                return [(day != 0 && day != 6), ''];
+            },
+            onSelect: function(dateText, inst) {
+                $(".time-slots").show();
+            }
+        });
+    });
+</script>
+</body>
+</html>

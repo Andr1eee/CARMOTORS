@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="style.css">.
+    <style>
+        .map {
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 600px) {
+            iframe {
+                height: 300px;
+            }
+        }
+        .contact-info {
+            margin-bottom: 20px;
+            display: inline-block;
+            text-align: left;
+        }
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+<h1>CARMOTORS</h1>
+<div class="logo">
+    <img src="https://i.postimg.cc/kBLdJ9cY/autologo.jpg" alt="Logo" style="border-radius: 50%" width="200" height="200">
+</div>
+<h2 style="text-align: end" id="account-username"></h2>
+<nav>
+
+    <button class="toggle-btn" style="background-color: #fafaf7; color: rgba(24, 24, 24, 0.85); border-radius: 18px">&#9776;</button>
+    <a class="nav-link pc" href="cars.html">Топ продажів</a>
+    <a class="nav-link pc" href="about.html">Контаки</a>
+    <a class="nav-link pc" href="home.html">Головна</a>
+
+
+    <div class="mobile-nav">
+        <br>
+        <a class="nav-link mb" href="cars.html">Топ продажів</a>
+        <br>
+        <a class="nav-link mb" href="about.html">Контаки</a>
+        <br>
+        <a class="nav-link mb" href="home.html">Головна</a>
+        <br>
+    </div>
+
+</nav>
+<div class="content-center">
+
+    <div class="text-container" style="width:100%; padding: 12px; background-color: #efefef; border-radius: 12px;">
+        <div style="width: 100%; text-align: center;">
+            <h1>Наші контакти</h1>
+            <div class="contact-info" style="justify-content: center">
+                <p><strong>Адреса:</strong> вул. Центральна, 10, м. Вінниця, 21000, Україна</p>
+                <p><strong>Телефон:</strong> +38 (0432) 123-456</p>
+                <p><strong>Email:</strong> info@carmotors.ua</p>
+                <p><strong>Години роботи:</strong></p>
+                <ul>
+                    <li>Понеділок - П’ятниця: 9:00 - 18:00</li>
+                    <li>Субота: 10:00 - 16:00</li>
+                    <li>Неділя: Вихідний</li>
+                </ul>
+            </div>
+            <div class="map">
+                <h2>Ми на карті</h2>
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10245.632666106946!2d28.451900669347116!3d49.233083546173065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472c651acc3f6a5b%3A0x7c5b62a9052a320e!2z0J3QvtCy0YvRjyDQv9C-0LvRjNC90YvQuSDQstGD0YjQuNC5!5e0!3m2!1suk!2sua!4v1626949614982!5m2!1suk!2sua"
+                        allowfullscreen=""
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="get-user-data.js"></script>
+<script src="nav-bar.js"></script>
+</body>
+</html>
