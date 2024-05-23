@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isBought = params.isBought;
 
     // Отправляем запрос на сервер для получения данных байка
-    fetch(`http://localhost:8080/cars/${carId}`,{
+    fetch(`http://localhost:8081/cars/${carId}`,{
         method:"GET",
         headers: new Headers({
             "ngrok-skip-browser-warning": "69420",

@@ -8,7 +8,7 @@ document.getElementById("registration-button").addEventListener("click",function
         phoneNumber:document.getElementById("phone").value
     }
 
-    fetch(`http://localhost:8080/users`,{
+    fetch(`http://localhost:8081/users`,{
         method:"POST",
         headers: {
             'Content-Type': 'application/json'
