@@ -11,9 +11,7 @@ body {
 h1, h2, h3, p {
     margin: 0;
 }
-a{
-    color: #4F6F52;
-}
+
 /*===== HOME =====*/
 .home {
     height: 100vh;
@@ -48,32 +46,40 @@ a{
 
 
 .home_parallax-img1 {
-    background-image: url("1x/triangle head.png");
+    background-image: url("1x/triangle head.webp");
     z-index: var(--z-modal);
 }
 
 .home_parallax-img2 {
 
-    background-image: url("1x/car head.png");
+    background-image: url("1x/car head.webp");
     z-index: var(--z-tooltip);
 }
 
 .home_parallax-img3 {
 
-    background-image: url("1x/body.png");
+    background-image: url("1x/body.webp");
     z-index: var(--z-normal);
 }
 .home_parallax-img4 {
     border: 10px #328163 solid;
-    background-image: url("1x/triangle bottom.png");
+    background-image: url("1x/triangle bottom.webp");
     z-index: var(--z-modal);
 }
 .home_parallax-img5 {
 
-    background-image: url("1x/car bottom.png");
+    background-image: url("1x/car bottom.webp");
     z-index: var(--z-tooltip);
 }
 
+@media screen and (max-width: 760px) {
+    .home_parallax-img2{
+        display: none;
+    }
+    .home_parallax-img5{
+        display: none;
+    }
+}
 
 
 .home_title, .home_subtitle {
