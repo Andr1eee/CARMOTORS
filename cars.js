@@ -34,7 +34,4 @@ fetch('http://localhost:8081/cars', {
 
             containerCars.appendChild(carDiv);
         });
-    })
-    .catch(error => {
-        console.error('Error fetching bikes:', error);
     });
